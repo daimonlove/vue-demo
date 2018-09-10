@@ -1,0 +1,86 @@
+@import "../../assets/css/index.scss";
+
+@include b(wrapper) {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  min-height: 100%;
+  overflow-y: hidden;
+}
+
+@include b(header) {
+  display: flex;
+  position: fixed;
+  top: 0;
+  right:0;
+  left: 0;
+  height: 64px;
+  padding: 0 16px;
+  align-items: center;
+  background-color: $--color-base;
+  box-shadow: 0 1px 10px rgba(0, 0, 0, .2);
+  z-index: 19
+}
+
+@include b(sidebar) {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  margin-top: 64px;
+  width: 200px;
+  overflow: hidden;
+  background: $--color-white;
+  transition: width .2s cubic-bezier(.25, 0, .15, 1), translate .2s cubic-bezier(.25, 0, .15, 1);
+  z-index: 14;
+  &:after {
+    position: absolute;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    content: '';
+    border-right: 1px solid $--border-color;
+  }
+}
+
+@include b(container) {
+  display: block;
+  margin: 116px 0 20px 220px;
+  height: calc(100% - 116px);
+
+  transition: margin-left .2s cubic-bezier(.25, 0, .15, 1), translate .2s cubic-bezier(.25, 0, .15, 1);
+}
+
+@include b(reuse-tab) {
+  position: fixed;
+  top: 64px;
+  right: 0;
+  left: 200px;
+  height: 52px;
+  z-index: 10;
+  background: $--color-white;
+  border-bottom: 1px solid $--border-color;
+  box-sizing: border-box;
+  transition: left .2s cubic-bezier(.25, 0, .15, 1), translate .2s cubic-bezier(.25, 0, .15, 1);
+}
+
+@include b(aside-collapsed){
+  @include b(sidebar){
+    width:64px;
+  }
+
+  @include b(container){
+    margin-left:84px;
+  }
+
+  @include b(reuse-tab){
+    left: 64px;
+  }
+}
+
+@include b(page-content__scroll){
+  height: 100%;
+  .el-scrollbar__wrap{
+    overflow-x: auto;
+  }
+}

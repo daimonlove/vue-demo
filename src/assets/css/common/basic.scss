@@ -1,0 +1,56 @@
+@import "variable";
+@import "../mixins/index";
+body{
+  height: 100%;
+  //font-family: "Monospaced Number","Microsoft YaHei", "微软雅黑", Arial, sans-serif;
+  font-family: "Monospaced Number", "Chinese Quote", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  line-height: 1.5;
+  color: rgba(0,0,0,.65);
+  background-color: $--body-color!important
+}
+a{
+  color:$--link-color;
+  text-decoration: none;
+  &:hover{
+    color: $--link-color-hover;
+  }
+}
+
+h1,h2,h3,h4,h5,h6{
+  font-weight: normal;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+//全局加载进度条颜色
+#nprogress .bar{
+  height:4px !important;
+  background: $--nprogress-color !important;
+}
+
+input:-webkit-autofill {
+  -webkit-box-shadow: 0 0 0px 1000px darken($--color-white,3%) inset !important;
+  -webkit-text-fill-color: $--color-green !important;
+}
+[class^="icon-"]{
+  font-family:"iconfont" !important;
+  font-size:16px;
+  font-style:normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+@include b(scrollbar){
+  overflow-x: hidden!important;
+  .el-scrollbar__view {
+    height: 100%;
+  }
+}
+
+.router-link-active{
+  color: $--link-color-hover;
+}

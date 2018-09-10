@@ -1,0 +1,25 @@
+/* --------------------
+  Color
+ -------------------- */
+
+$--color-base: #1890ff !default;
+$--font-color-base: rgba(0,0,0,.65) !default;
+
+$--color-white: #fff !default;
+$--color-black: #000 !default;
+$--color-gray: #666 !default;
+$--color-green: #42b983 !default;
+$--color-login-bg: #0076e4 !default;
+
+$--link-color: $--font-color-base !default;
+$--link-color-hover: $--color-base !default;
+
+$--border-color: #efe3e5 !default;
+$--body-color: #f5f7fa !default;
+$--nprogress-color: #ff31ac !default;
+/* --------------------
+  Size
+ -------------------- */
+$--font-size-base: 14px !default;
+$--font-size-small: 12px !default;
+$--font-size-large: 18px !default;

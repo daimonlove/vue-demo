@@ -1,0 +1,61 @@
+{
+  "index":{
+    "name": "index",
+    "desc": "主页",
+    "icon": "icon-home"
+  },
+  "widgets": {
+    "name": "Widgets",
+    "desc": "图表",
+    "icon": "icon-rocket",
+    "type": ""
+  },
+  "dashboard": {
+    "desc": "仪表盘",
+    "name": "dashboard",
+    "icon": "icon-speedometer",
+    "children": [
+      {
+        "name": "v1",
+        "path": "v1",
+        "component": "v1",
+        "desc": "图表",
+        "icon": "",
+        "type": "",
+        "hidden": false
+      },
+      {
+        "name": "workplace",
+        "component": "/workplace",
+        "desc": "工作台",
+        "icon": "",
+        "type": "",
+        "hidden": false
+      }
+    ]
+  },
+  "form": {
+    "desc": "表单页",
+    "name": "form",
+    "icon": "icon-speedometer",
+    "children": [
+      {
+        "name": "v1",
+        "path": "v1",
+        "component": "v1",
+        "desc": "图表",
+        "icon": "",
+        "type": "",
+        "hidden": false
+      },
+      {
+        "name": "workplace",
+        "component": "/workplace",
+        "desc": "工作台",
+        "icon": "",
+        "type": "",
+        "hidden": false
+      }
+    ]
+  }
+}
